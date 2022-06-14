@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <title>Arkanoid</title>
+
+  </head>
+
+  <body>
+
+    <div id="main" class="main">
+      <canvas id="playField" width="1000" height="600"></canvas>
+      <img id="background" src="./images/background.png" alt="img"></img>
+      <div id="display">
+        <div id="score"></div>
+        <button class="button" id="start">Começar</button>
+        <div id="info">Pressione!</div>
+      </div>
+      <div class="dev">
+        <p class="dev-paraghaph"></p>
+        <div class="img__lang">
+          <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="html">
+          <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="ts">
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.ts"></script>
+
+  </body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #4b6cb7;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      font-family: 'Poppins', sans-serif;
+    }
+
+    :root {
+      --width: 1000px;
+      --height: 650px;
+    }
+
+    #main {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+      width: var(--width);
+      height: var(--height);
+      font-size: 32px;
+    }
+
+    .description{
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;;
+    font-size: 16px;
+    margin-top: 35rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .img__lang{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-top: 10rem;
+    margin-right: 20px;
+  }
+
+    .button{
+      position: absolute;
+      margin-top: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 50px;
+      background-color: rgb(21, 138, 103);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      transition: .3s;
+    }
+
+    .button:hover{
+      transition: .3s;
+      background-color: rgb(25, 167, 124);
+      color: #fff;
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      margin-bottom: 40px;
+    }
+
+    #display {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      width: var(--width);
+    }
+
+    #score,
+    #info {
+      width: 200px;
+    }
+  </style>
+</html>
